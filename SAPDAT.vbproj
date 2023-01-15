@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89A9A329-4113-4EFF-8AA4-70C1058263FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SAPDAT.My.MyApplication</StartupObject>
+    <RootNamespace>SAPDAT</RootNamespace>
+    <AssemblyName>SAPDAT</AssemblyName>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SAPDAT.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SAPDAT.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Form\AboutBox.Designer.vb">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmChangePassword.Designer.vb">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmDeputi.Designer.vb">
+      <DependentUpon>frmDeputi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmDeputi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmGroupRekomendasi.Designer.vb">
+      <DependentUpon>frmGroupRekomendasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmGroupRekomendasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmGroupTemuan.Designer.vb">
+      <DependentUpon>frmGroupTemuan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmGroupTemuan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmGroupTL.Designer.vb">
+      <DependentUpon>frmGroupTL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmGroupTL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmRekomendasi.Designer.vb">
+      <DependentUpon>frmRekomendasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmRekomendasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmResetPass.Designer.vb">
+      <DependentUpon>frmResetPass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmResetPass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmSatker.Designer.vb">
+      <DependentUpon>frmSatker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmSatker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmTemuan.Designer.vb">
+      <DependentUpon>frmTemuan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmTemuan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmTindakLanjut.Designer.vb">
+      <DependentUpon>frmTindakLanjut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmTindakLanjut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmLaporan.Designer.vb">
+      <DependentUpon>frmLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmUser.Designer.vb">
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\KriteriaLaporan.Designer.vb">
+      <DependentUpon>KriteriaLaporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\KriteriaLaporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\QueryBrowser.Designer.vb">
+      <DependentUpon>QueryBrowser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\QueryBrowser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\dbAct.vb" />
+    <Compile Include="Form\frmDIT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmDIT.Designer.vb">
+      <DependentUpon>frmDIT.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\Definision.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Class\Laporan.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Copy of Rekap.vb">
+      <DependentUpon>Copy of Rekap.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\Deputi.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Deputi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\JenisRekomendasi.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JenisRekomendasi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\JenisTemuan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JenisTemuan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\JenisTL.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JenisTL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Lampiran.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lampiran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Rekap.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rekap.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Satker.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Satker.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\RekapPerSatker.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RekapPerSatker.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\AboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmChangePassword.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmDeputi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDeputi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmDIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDIT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmGroupRekomendasi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGroupRekomendasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmGroupTemuan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGroupTemuan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmGroupTL.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGroupTL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmRekomendasi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRekomendasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmResetPass.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmResetPass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmSatker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSatker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmTemuan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTemuan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmLaporan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLaporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmTindakLanjut.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTindakLanjut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmUser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\KriteriaLaporan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KriteriaLaporan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LoginForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\QueryBrowser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QueryBrowser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SplashScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Copy of Rekap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copy of Rekap.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Deputi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Deputi.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\JenisRekomendasi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>JenisRekomendasi.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\JenisTemuan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>JenisTemuan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\JenisTL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>JenisTL.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Lampiran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Lampiran.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rekap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rekap.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Satker.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Satker.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RekapPerSatker.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RekapPerSatker.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\LampirantBelumTuntas.SQL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\alow_jumplink.gif" />
+    <Content Include="Resources\brr_logo.GIF" />
+    <Content Include="Resources\go-next.png" />
+    <Content Include="Resources\ov_teamsup48.gif" />
+    <Content Include="Resources\support.png" />
+    <None Include="app.config" />
+    <None Include="Resources\support1.png" />
+    <None Include="Resources\system-search.png" />
+    <None Include="Resources\timeplay_active.png" />
+    <Content Include="Resources\vb_install_normal.gif" />
+    <Content Include="Resources\vb_install_normal1.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
